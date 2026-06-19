@@ -1,11 +1,12 @@
 :root {
-  --bg: #f4efe6;
+  --bg: #f6f1ea;
   --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: #fff8ef;
-  --text: #171717;
+  --surface-strong: #ffffff;
+  --text: #1a1a1a;
   --muted: #5f5a53;
-  --accent: #0f766e;
-  --accent-dark: #115e59;
+  --accent: #4a4a42;
+  --accent-dark: #2f2f2a;
+  --gold: #8c6a3d;
   --border: rgba(23, 23, 23, 0.12);
   --shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
 }
@@ -23,9 +24,9 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(217, 119, 6, 0.12), transparent 30%),
-    linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(140, 106, 61, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(74, 74, 66, 0.12), transparent 30%),
+    linear-gradient(180deg, #fbf8f3 0%, var(--bg) 100%);
 }
 
 img {
@@ -76,10 +77,10 @@ textarea {
 }
 
 .brand {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .nav {
@@ -130,7 +131,7 @@ textarea {
 }
 
 .hero-grid {
-  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.9fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.95fr);
 }
 
 .hero-copy h1,
@@ -139,12 +140,13 @@ textarea {
 .contact-copy h2 {
   margin: 0;
   line-height: 0.98;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.8rem, 8vw, 5.8rem);
-  max-width: 11ch;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  max-width: 12ch;
 }
 
 .section-heading h2,
@@ -159,7 +161,7 @@ textarea {
   letter-spacing: 0.18em;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent-dark);
+  color: var(--gold);
 }
 
 .hero-text,
@@ -225,19 +227,20 @@ textarea {
 .hero-card {
   border-radius: 2rem;
   padding: 1.25rem;
-  min-height: 480px;
+  min-height: 420px;
   display: grid;
   place-items: end stretch;
   background:
-    linear-gradient(145deg, rgba(15, 118, 110, 0.15), rgba(255, 255, 255, 0.35)),
-    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80") center/cover;
+    linear-gradient(145deg, rgba(74, 74, 66, 0.16), rgba(255, 255, 255, 0.35)),
+    radial-gradient(circle at top right, rgba(140, 106, 61, 0.14), transparent 42%),
+    linear-gradient(180deg, #efe8dd 0%, #d9d0c2 100%);
 }
 
 .stat-card {
   border-radius: 1.5rem;
   padding: 1.25rem;
-  max-width: 22rem;
-  background: rgba(255, 248, 239, 0.9);
+  max-width: 24rem;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .stat-label {
@@ -256,11 +259,23 @@ textarea {
   margin-bottom: 0.5rem;
 }
 
+.mini-contact {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
+}
+
+.resume-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .project-card {
@@ -273,15 +288,15 @@ textarea {
 }
 
 .art-one {
-  background: linear-gradient(135deg, #0f766e, #a7f3d0);
+  background: linear-gradient(135deg, #4a4a42, #d7c6aa);
 }
 
 .art-two {
-  background: linear-gradient(135deg, #b45309, #fde68a);
+  background: linear-gradient(135deg, #8c6a3d, #e7d6ba);
 }
 
 .art-three {
-  background: linear-gradient(135deg, #4338ca, #c7d2fe);
+  background: linear-gradient(135deg, #2f2f2a, #b7ab9c);
 }
 
 .project-body {
@@ -290,6 +305,22 @@ textarea {
 
 .about-grid {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+}
+
+.about-grid-compact {
+  margin-top: 2rem;
+}
+
+.timeline-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 1.3rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(23, 23, 23, 0.08);
+}
+
+.timeline-card h3 {
+  margin-top: 0;
 }
 
 .about-panel {
@@ -306,6 +337,54 @@ textarea {
   padding-left: 1.1rem;
   color: var(--muted);
   line-height: 1.9;
+}
+
+.skills-grid,
+.coursework-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.skills-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skills-panel div,
+.contact-list {
+  padding: 1.1rem 1.15rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(23, 23, 23, 0.08);
+}
+
+.skills-panel h3,
+.contact-list strong {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.skills-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.coursework-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  color: var(--muted);
 }
 
 .contact-grid {
@@ -344,7 +423,7 @@ textarea {
 .form-status {
   min-height: 1.25rem;
   margin: 0;
-  color: var(--accent-dark);
+  color: var(--gold);
   font-weight: 600;
 }
 
@@ -387,12 +466,18 @@ textarea {
   .hero-grid,
   .about-grid,
   .contact-grid,
-  .projects-grid {
+  .projects-grid,
+  .skills-grid,
+  .coursework-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-card {
     min-height: 360px;
+  }
+
+  .skills-panel {
+    grid-template-columns: 1fr;
   }
 }
 
