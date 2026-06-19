@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A clean, responsive portfolio layout for showcasing projects and contacting the designer.">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">Portfolio</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="primary-navigation" class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Designer & Front-End Developer</p>
+          <h1>Building thoughtful digital experiences that feel clear, fast, and modern.</h1>
+          <p class="hero-text">
+            I design and build responsive interfaces with a focus on usability, visual clarity, and polished interactions.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-secondary" href="#contact">Let’s Talk</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="stat-card">
+            <span class="stat-label">Featured Work</span>
+            <strong>3 Projects</strong>
+            <p>Responsive layouts, clean UI systems, and practical interaction design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Projects</p>
+          <h2>Three projects that show range, structure, and attention to detail.</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art art-one"></div>
+            <div class="project-body">
+              <h3>Brand Landing Page</h3>
+              <p>A bold marketing page with clear hierarchy, smooth spacing, and mobile-first responsiveness.</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-two"></div>
+            <div class="project-body">
+              <h3>Task Dashboard</h3>
+              <p>A clean dashboard concept designed to help users scan data quickly and act without friction.</p>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art art-three"></div>
+            <div class="project-body">
+              <h3>Portfolio Microsite</h3>
+              <p>A compact personal site with a focused message, strong visuals, and direct contact options.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About Me</p>
+          <h2>I build interfaces that balance personality with clarity.</h2>
+          <p>
+            My work blends design sensibility with front-end implementation. I enjoy crafting layouts that are easy to navigate,
+            visually coherent, and practical across phones, tablets, and desktops.
+          </p>
+          <p>
+            I care about the details that make a page feel complete: spacing, type scale, interaction states, and accessibility.
+          </p>
+        </div>
+        <aside class="about-panel reveal">
+          <h3>What I Focus On</h3>
+          <ul>
+            <li>Responsive layouts</li>
+            <li>Accessible components</li>
+            <li>Clear visual hierarchy</li>
+            <li>Simple, maintainable code</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Have a project in mind? Send a message.</h2>
+          <p>
+            Use the form to share a brief overview of your idea, timeline, or collaboration request.
+          </p>
+        </div>
+        <form class="contact-form reveal">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Send Message</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Portfolio</p>
+      <a href="#home">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
