@@ -301,7 +301,7 @@ textarea {
   border-radius: 1.7rem;
   background:
     linear-gradient(180deg, rgba(10, 15, 24, 0.12), rgba(10, 15, 24, 0.4)),
-    url("profile.jpg") center top / cover no-repeat,
+    url("profile.png") center top / cover no-repeat,
     radial-gradient(circle at 50% 38%, rgba(94, 234, 212, 0.16), transparent 28%),
     linear-gradient(180deg, #1c2837 0%, #111827 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
