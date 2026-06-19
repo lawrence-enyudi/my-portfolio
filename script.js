@@ -3,6 +3,7 @@ const navigation = document.querySelector('.nav');
 const revealItems = document.querySelectorAll('.reveal');
 const contactForm = document.querySelector('.contact-form');
 const formStatus = document.querySelector('.form-status');
+const spotlightTargets = document.querySelectorAll('.hero-card, .project-card, .about-panel, .contact-form, .skills-panel div, .timeline-card, .contact-list, .stat-card');
 
 if (menuToggle && navigation) {
   menuToggle.addEventListener('click', () => {
@@ -43,3 +44,18 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+spotlightTargets.forEach((target) => {
+  target.addEventListener('pointermove', (event) => {
+    const rect = target.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    target.style.setProperty('--x', `${x}%`);
+    target.style.setProperty('--y', `${y}%`);
+  });
+
+  target.addEventListener('pointerleave', () => {
+    target.style.setProperty('--x', '50%');
+    target.style.setProperty('--y', '50%');
+  });
+});
